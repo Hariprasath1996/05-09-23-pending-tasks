@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Average Calculator</title>
+</head>
+<body>
+
+<script>
+    var numbers = [2, 3, 4, 5];
+    function calculateAverage(arr) {
+        if (arr.length === 0) {
+            return 0; 
+        }
+        var sum = 0;
+        for (var i = 0; i < arr.length; i++) {
+            sum += arr[i];
+        }
+        return sum / arr.length;
+    }
+    var average = calculateAverage(numbers);
+    document.write("Numbers: " + numbers.join(', ') + "<br>");
+    document.write("Average: " + average);
+</script>
+</body>
+</html>

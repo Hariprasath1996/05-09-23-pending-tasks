@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Remove Duplicates</title>
+</head>
+<body>
+
+<script>
+    var items = ["apple", "banana", "cherry", "apple", "date", "banana", "elderberry"];
+    function removeDuplicates(arr) {
+        return arr.filter((item, index) => arr.indexOf(item) === index);
+    }
+    var uniqueItems = removeDuplicates(items);
+    document.write("Original List of Items: " + items.join(', ') + "<br>");
+    document.write("List of Items with Duplicates Removed: " + uniqueItems.join(', '));
+</script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Largest and Smallest Odd Numbers</title>
+</head>
+<body>
+
+<script>
+    var numbers = [2, 4, 5, 7, 2, 3];
+    function findLargestOddNumber(arr) {
+        var largestOdd = null;
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 !== 0) { // Check if the number is odd
+                if (largestOdd === null || arr[i] > largestOdd) {
+                    largestOdd = arr[i];
+                }
+            }
+        }
+        return largestOdd;
+    }
+    function findSmallestOddNumber(arr) {
+        var smallestOdd = null;
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 !== 0) { // Check if the number is odd
+                if (smallestOdd === null || arr[i] < smallestOdd) {
+                    smallestOdd = arr[i];
+                }
+            }
+        }
+
+        return smallestOdd;
+    }
+    var largestOdd = findLargestOddNumber(numbers);
+    var smallestOdd = findSmallestOddNumber(numbers);
+    // Display the results on the web page
+    document.write("Numbers: " + numbers.join(', ') + "<br>");
+    if (largestOdd !== null) {
+        document.write("Largest Odd Number: " + largestOdd + "<br>");
+    } else {
+        document.write("No odd numbers were found in the array.<br>");
+    }
+    if (smallestOdd !== null) {
+        document.write("Smallest Odd Number: " + smallestOdd);
+    } else {
+        document.write("No odd numbers were found in the array.");
+    }
+</script>
+
+</body>
+</html>

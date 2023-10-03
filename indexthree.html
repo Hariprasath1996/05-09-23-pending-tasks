@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Palindrome Checker</title>
+</head>
+<body>
+
+<script>
+    var inputString = "ABCDCBA";
+    function isPalindrome(str) {
+      
+        str = str.replace(/\s/g, '').toLowerCase()
+        var reversedStr = str.split('').reverse().join('');
+        return str === reversedStr;
+    }
+    var result = isPalindrome(inputString);
+    if (result) {
+        document.write("The input string is a palindrome.");
+    } else {
+        document.write("The input string is not a palindrome.");
+    }
+</script>
+
+</body>
+</html>
